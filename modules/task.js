@@ -1,12 +1,12 @@
-class Task{
-    
-    constructor(id, name, parentId){
+class Task {
+
+    constructor(id, name, parentId) {
         this.id = id;
         this.name = name;
         this.parentId = parentId;
     }
 
-    print(){
+    print() {
         console.log(`Print task: ${this.name}`);
 
         let listItem = document.createElement("li");
@@ -14,7 +14,7 @@ class Task{
         listItem.id = `${this.id}`;
 
         let list = document.getElementById(this.parentId);
-        if(list !== null){
+        if (list !== null) {
             list.appendChild(listItem);
         }
 
@@ -22,6 +22,4 @@ class Task{
     }
 }
 
-
-
-export {Task};
+export { Task };
